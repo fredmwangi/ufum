@@ -1,5 +1,5 @@
-# Use Fastest Ubuntu Mirror
-
+# Use Fastest Ubuntu Mirror  
+[![Build Status](https://travis-ci.org/fredmwangi/ufum.svg?branch=master)](https://travis-ci.org/fredmwangi/ufum)
 
 Hacked the code from [ffum](https://www.npmjs.com/package/ffum) and just
 added the extra step of replacing the old mirror with the new in
