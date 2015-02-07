@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/fredmwangi/ufum/issues"
   },
-  "licenses": [GPLv3],
+  "licenses": ["GPLv3"],
   "readmeFilename": "README.md",
   "gitHead": "d244084b309741ce330d9891a15974b226536104"
 }
