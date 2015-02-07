@@ -1,5 +1,6 @@
 # Use Fastest Ubuntu Mirror
 
+
 Hacked the code from [ffum](https://www.npmjs.com/package/ffum) and just
 added the extra step of replacing the old mirror with the new in
 /etc/apt/sources.list
