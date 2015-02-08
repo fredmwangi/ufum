@@ -34,7 +34,8 @@ function getOldMirror(callbackFn, errorFn) {
     });
 
     rd.on('line', function(line) {
-        var oldMirror = "" + line.substring(4, line.length - 43);
+        var endOfURL = line.indexOf(" ", 4);
+        var oldMirror = line.substring(4, endOfURL);
         callbackFn(oldMirror);
     });
 }
@@ -75,10 +76,9 @@ getMirrorsList(function(mirrors) {
     sortByAverageResponseTime(mirrors, function(servers) {
         var newMirror = "" + servers[0].mirror;
         newMirror = newMirror.trim();
+        console.log('Winner: ' + newMirror);
         getOldMirror(function(oldMirror) {
-            console.log('Old mirror: ' + oldMirror);
-            console.log('Winner: ' + newMirror);
-            oldMirror = oldMirror.trim();
+            console.log('Previous: ' + oldMirror);
             var replaceCommand = "sudo sed -i 's," + oldMirror + "," + newMirror + ",g' /etc/apt/sources.list";
             childProcess.exec(replaceCommand, function(error, stdout, stderr) {
                 if (error !== null) {
