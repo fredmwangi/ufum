@@ -27,7 +27,7 @@ function getOldMirror(callbackFn, errorFn) {
     var rd = readline.createInterface({
         input: fs.createReadStream('/etc/apt/sources.list', {
             start: 0,
-            end: 120
+            end: 80
         }),
         output: process.stdout,
         terminal: false
