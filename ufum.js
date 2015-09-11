@@ -79,7 +79,7 @@ getMirrorsList(function(mirrors) {
         console.log('Winner: ' + newMirror);
         getOldMirror(function(oldMirror) {
             console.log('Previous: ' + oldMirror);
-            var replaceCommand = "sudo sed -i 's," + oldMirror + "," + newMirror + ",g' /etc/apt/sources.list";
+            var replaceCommand = "sudo sed -i '1,4 s," + oldMirror + "," + newMirror + ",' /etc/apt/sources.list";
             childProcess.exec(replaceCommand, function(error, stdout, stderr) {
                 if (error !== null) {
                     console.log('exec error: ' + error);
