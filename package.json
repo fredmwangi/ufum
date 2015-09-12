@@ -2,7 +2,7 @@
   "name": "ufum",
   "description": "Use Fastest Ubuntu Mirror",
   "homepage": "https://github.com/fredmwangi/ufum",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Fred Mwangi",
   "main": "ufum.js",
   "bin": { "ufum": "ufum.js" },
@@ -22,5 +22,5 @@
   },
   "licenses": ["GPLv3"],
   "readmeFilename": "README.md",
-  "gitHead": "13ce8f6792dda67f38a7736163683841ce8b90e5"
+  "gitHead": "47f8a448bbd7dc6b4f104f2c207d83b30867e735"
 }
