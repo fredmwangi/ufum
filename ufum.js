@@ -25,10 +25,7 @@ function getMirrorsList(callbackFn, errorFn) {
 
 function getOldMirror(callbackFn, errorFn) {
     var rd = readline.createInterface({
-        input: fs.createReadStream('/etc/apt/sources.list', {
-            start: 0,
-            end: 80
-        }),
+        input: fs.createReadStream('/etc/apt/sources.list', {start: 0,end: 80}),
         output: process.stdout,
         terminal: false
     });
@@ -36,6 +33,7 @@ function getOldMirror(callbackFn, errorFn) {
     rd.on('line', function(line) {
         var endOfURL = line.indexOf(" ", 4);
         var oldMirror = line.substring(4, endOfURL);
+        rd.close();
         callbackFn(oldMirror);
     });
 }
